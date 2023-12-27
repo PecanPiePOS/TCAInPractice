@@ -21,6 +21,7 @@ let calculations = [
 
 /// 이거를 Swift Macro 로 단순화한 형태로 바꿔보자
 /// Compile 타임에 정해지고, 중복 코드가 많이 개선됨
+/*
 let calculationsWithMacro = [
     #stringfy(1 + 1),
     #stringfy(2 + 3),
@@ -29,13 +30,14 @@ let calculationsWithMacro = [
     #stringfy(3 * 2),
     #stringfy(3 * 5)
 ]
+ */
 
 /** 이제 만들어보자!
  1. 키워드를 먼저 작성한다.
-    - @freestanding
+    - @freestanding -> "사용시에 # 으로 시작"
         a. @freestanding(expression): 미리 정의한 값 반환
         b. @freestanding(declaration): 특정 인수를 받아서 처리
-    - @attached
+    - @attached -> "사용시에 @ 으로 시작"
         a. @attached(peer): 적용되는 선언과 함께 새 선언을 추가
         b. @attached(accessor): property 에 get, set, willSet, didSet 과 같은 접근자를 추가하는 매크로
         c. @attached(memberAttribute): property wrapper 처럼 사용하며, 각 property 에 일괄 적용하여 생략 가능하게 사용 가능한 방법
@@ -56,7 +58,8 @@ let calculationsWithMacro = [
 /*
  @freestanding(expression)
 macro stringfy(_ value: Int) -> (Int, String)
-*/
+ */
+
 
 /**
  Macro Plugin 이란, Swift Macro 를 구현하는 부분을 의미한다.
