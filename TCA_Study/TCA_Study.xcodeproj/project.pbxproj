@@ -15,6 +15,9 @@
 		58ADA3CE2B3C1F6400ED0BC5 /* TCA_StudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADA3CD2B3C1F6400ED0BC5 /* TCA_StudyTests.swift */; };
 		58ADA3D82B3C1F6400ED0BC5 /* TCA_StudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADA3D72B3C1F6400ED0BC5 /* TCA_StudyUITests.swift */; };
 		58ADA3DA2B3C1F6400ED0BC5 /* TCA_StudyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADA3D92B3C1F6400ED0BC5 /* TCA_StudyUITestsLaunchTests.swift */; };
+		58ADA3E92B3C284A00ED0BC5 /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADA3E82B3C284A00ED0BC5 /* CounterFeature.swift */; };
+		58ADA3EC2B3C28C100ED0BC5 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 58ADA3EB2B3C28C100ED0BC5 /* ComposableArchitecture */; };
+		58ADA3EF2B3C4A1F00ED0BC5 /* MacroInPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADA3EE2B3C4A1F00ED0BC5 /* MacroInPractice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,8 @@
 		58ADA3D32B3C1F6400ED0BC5 /* TCA_StudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCA_StudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ADA3D72B3C1F6400ED0BC5 /* TCA_StudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_StudyUITests.swift; sourceTree = "<group>"; };
 		58ADA3D92B3C1F6400ED0BC5 /* TCA_StudyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_StudyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		58ADA3E82B3C284A00ED0BC5 /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
+		58ADA3EE2B3C4A1F00ED0BC5 /* MacroInPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroInPractice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58ADA3EC2B3C28C100ED0BC5 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,10 +102,9 @@
 		58ADA3B92B3C1F6200ED0BC5 /* TCA_Study */ = {
 			isa = PBXGroup;
 			children = (
-				58ADA3BA2B3C1F6200ED0BC5 /* TCA_StudyApp.swift */,
-				58ADA3BC2B3C1F6200ED0BC5 /* ContentView.swift */,
-				58ADA3BE2B3C1F6200ED0BC5 /* Item.swift */,
-				58ADA3C02B3C1F6300ED0BC5 /* Assets.xcassets */,
+				58ADA3ED2B3C4A0E00ED0BC5 /* WhatIsMacro */,
+				58ADA3E62B3C280700ED0BC5 /* Reducers */,
+				58ADA3E72B3C281600ED0BC5 /* SomeApps */,
 				58ADA3C22B3C1F6300ED0BC5 /* Preview Content */,
 			);
 			path = TCA_Study;
@@ -130,6 +135,33 @@
 			path = TCA_StudyUITests;
 			sourceTree = "<group>";
 		};
+		58ADA3E62B3C280700ED0BC5 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				58ADA3E82B3C284A00ED0BC5 /* CounterFeature.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		58ADA3E72B3C281600ED0BC5 /* SomeApps */ = {
+			isa = PBXGroup;
+			children = (
+				58ADA3BA2B3C1F6200ED0BC5 /* TCA_StudyApp.swift */,
+				58ADA3BC2B3C1F6200ED0BC5 /* ContentView.swift */,
+				58ADA3BE2B3C1F6200ED0BC5 /* Item.swift */,
+				58ADA3C02B3C1F6300ED0BC5 /* Assets.xcassets */,
+			);
+			path = SomeApps;
+			sourceTree = "<group>";
+		};
+		58ADA3ED2B3C4A0E00ED0BC5 /* WhatIsMacro */ = {
+			isa = PBXGroup;
+			children = (
+				58ADA3EE2B3C4A1F00ED0BC5 /* MacroInPractice.swift */,
+			);
+			path = WhatIsMacro;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +178,9 @@
 			dependencies = (
 			);
 			name = TCA_Study;
+			packageProductDependencies = (
+				58ADA3EB2B3C28C100ED0BC5 /* ComposableArchitecture */,
+			);
 			productName = TCA_Study;
 			productReference = 58ADA3B72B3C1F6200ED0BC5 /* TCA_Study.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +253,9 @@
 				Base,
 			);
 			mainGroup = 58ADA3AE2B3C1F6200ED0BC5;
+			packageReferences = (
+				58ADA3EA2B3C28C100ED0BC5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 58ADA3B82B3C1F6200ED0BC5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,6 +301,8 @@
 				58ADA3BD2B3C1F6200ED0BC5 /* ContentView.swift in Sources */,
 				58ADA3BF2B3C1F6200ED0BC5 /* Item.swift in Sources */,
 				58ADA3BB2B3C1F6200ED0BC5 /* TCA_StudyApp.swift in Sources */,
+				58ADA3EF2B3C4A1F00ED0BC5 /* MacroInPractice.swift in Sources */,
+				58ADA3E92B3C284A00ED0BC5 /* CounterFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +632,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		58ADA3EA2B3C28C100ED0BC5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture#Installation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		58ADA3EB2B3C28C100ED0BC5 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58ADA3EA2B3C28C100ED0BC5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58ADA3AF2B3C1F6200ED0BC5 /* Project object */;
 }
