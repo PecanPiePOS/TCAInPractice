@@ -24,7 +24,6 @@ struct CounterView: View {
             VStack {
                 Text("\(viewStore.count)")
                     .font(.largeTitle)
-                    .frame(width: 50)
                     .padding()
                     .foregroundStyle(.white)
                     .background(Color.orange.opacity(1.0))
@@ -48,6 +47,26 @@ struct CounterView: View {
                     .padding()
                     .background(Color.white.opacity(0.1))
                     .cornerRadius(10)
+                }
+                
+                Button("Facto") {
+                    viewStore.send(.factButtonDidTap)
+                }
+                .font(.title3)
+                .foregroundStyle(.white)
+                .frame(width: 50, height: 20)
+                .padding()
+                .background(.pink.opacity(0.7), in: RoundedRectangle(cornerRadius: 7, style: .continuous))
+
+                if viewStore.isLoading != false {
+                    ProgressView()
+                        .tint(.yellow)
+                } else if let fact = viewStore.fact {
+                    Text(fact)
+                        .font(.footnote)
+                        .foregroundStyle(.white)
+                        .multilineTextAlignment(.center)
+                        .padding()
                 }
             }
         }
