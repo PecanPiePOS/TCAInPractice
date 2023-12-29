@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		587312B82B3EA45900219A3A /* TCA-Study-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TCA-Study-Info.plist"; sourceTree = SOURCE_ROOT; };
 		58A47B9E2B3D380B007ADCC5 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		58ADA3B72B3C1F6200ED0BC5 /* TCA_Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCA_Study.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ADA3BA2B3C1F6200ED0BC5 /* TCA_StudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_StudyApp.swift; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 		58ADA3B92B3C1F6200ED0BC5 /* TCA_Study */ = {
 			isa = PBXGroup;
 			children = (
+				587312B82B3EA45900219A3A /* TCA-Study-Info.plist */,
 				58A47B9D2B3D37FF007ADCC5 /* Views */,
 				58ADA3E62B3C280700ED0BC5 /* Reducers */,
 				58ADA3ED2B3C4A0E00ED0BC5 /* WhatIsMacro */,
@@ -473,6 +475,7 @@
 				DEVELOPMENT_TEAM = 98TYR8WM82;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-Study-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -502,6 +505,7 @@
 				DEVELOPMENT_TEAM = 98TYR8WM82;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-Study-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
