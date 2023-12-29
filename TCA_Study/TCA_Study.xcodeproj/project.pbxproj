@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58A47B9F2B3D380B007ADCC5 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A47B9E2B3D380B007ADCC5 /* CounterView.swift */; };
 		58ADA3BB2B3C1F6200ED0BC5 /* TCA_StudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADA3BA2B3C1F6200ED0BC5 /* TCA_StudyApp.swift */; };
-		58ADA3BD2B3C1F6200ED0BC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADA3BC2B3C1F6200ED0BC5 /* ContentView.swift */; };
-		58ADA3BF2B3C1F6200ED0BC5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADA3BE2B3C1F6200ED0BC5 /* Item.swift */; };
 		58ADA3C12B3C1F6300ED0BC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ADA3C02B3C1F6300ED0BC5 /* Assets.xcassets */; };
 		58ADA3C42B3C1F6300ED0BC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ADA3C32B3C1F6300ED0BC5 /* Preview Assets.xcassets */; };
 		58ADA3CE2B3C1F6400ED0BC5 /* TCA_StudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADA3CD2B3C1F6400ED0BC5 /* TCA_StudyTests.swift */; };
@@ -38,10 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		58A47B9E2B3D380B007ADCC5 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		58ADA3B72B3C1F6200ED0BC5 /* TCA_Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCA_Study.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ADA3BA2B3C1F6200ED0BC5 /* TCA_StudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_StudyApp.swift; sourceTree = "<group>"; };
-		58ADA3BC2B3C1F6200ED0BC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		58ADA3BE2B3C1F6200ED0BC5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		58ADA3C02B3C1F6300ED0BC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58ADA3C32B3C1F6300ED0BC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		58ADA3C92B3C1F6400ED0BC5 /* TCA_StudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCA_StudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58A47B9D2B3D37FF007ADCC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				58A47B9E2B3D380B007ADCC5 /* CounterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		58ADA3AE2B3C1F6200ED0BC5 = {
 			isa = PBXGroup;
 			children = (
@@ -102,8 +108,9 @@
 		58ADA3B92B3C1F6200ED0BC5 /* TCA_Study */ = {
 			isa = PBXGroup;
 			children = (
-				58ADA3ED2B3C4A0E00ED0BC5 /* WhatIsMacro */,
+				58A47B9D2B3D37FF007ADCC5 /* Views */,
 				58ADA3E62B3C280700ED0BC5 /* Reducers */,
+				58ADA3ED2B3C4A0E00ED0BC5 /* WhatIsMacro */,
 				58ADA3E72B3C281600ED0BC5 /* SomeApps */,
 				58ADA3C22B3C1F6300ED0BC5 /* Preview Content */,
 			);
@@ -147,8 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				58ADA3BA2B3C1F6200ED0BC5 /* TCA_StudyApp.swift */,
-				58ADA3BC2B3C1F6200ED0BC5 /* ContentView.swift */,
-				58ADA3BE2B3C1F6200ED0BC5 /* Item.swift */,
 				58ADA3C02B3C1F6300ED0BC5 /* Assets.xcassets */,
 			);
 			path = SomeApps;
@@ -298,11 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58ADA3BD2B3C1F6200ED0BC5 /* ContentView.swift in Sources */,
-				58ADA3BF2B3C1F6200ED0BC5 /* Item.swift in Sources */,
 				58ADA3BB2B3C1F6200ED0BC5 /* TCA_StudyApp.swift in Sources */,
 				58ADA3EF2B3C4A1F00ED0BC5 /* MacroInPractice.swift in Sources */,
 				58ADA3E92B3C284A00ED0BC5 /* CounterFeature.swift in Sources */,
+				58A47B9F2B3D380B007ADCC5 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

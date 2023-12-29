@@ -6,11 +6,31 @@
 //
 
 import Foundation
+import SwiftUI
 
 import ComposableArchitecture
 
 @Reducer
-struct CounterFeature {
+struct CounterFeature: Reducer {
+    public struct State: Equatable {
+        var count = 0
+    }
     
+    enum Action {
+        case decrementButtonDidTap
+        case incrementButtonDidTap
+    }
+    
+    var body: some ReducerOf<Self> {
+        Reduce { state, action in
+            switch action {
+            case .decrementButtonDidTap:
+                state.count -= 1
+                return .none
+            case .incrementButtonDidTap:
+                state.count += 1
+                return .none
+            }
+        }
+    }
 }
-
