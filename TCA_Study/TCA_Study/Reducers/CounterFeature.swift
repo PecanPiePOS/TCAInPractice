@@ -16,14 +16,19 @@ struct CounterFeature: Reducer {
         var count = 0
         var isLoading = false
         var fact: String?
+        var isTimerRunning = false
     }
     
     enum Action {
         case decrementButtonDidTap
         case incrementButtonDidTap
         case factButtonDidTap
+        case toggleTimerButtonDidTap
+        case timerTick
         case factResponse(String)
     }
+    
+    enum CancelID { case timer }
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -51,6 +56,24 @@ struct CounterFeature: Reducer {
                 state.fact = fact
                 state.isLoading = false
                 return .none
+                
+            case .timerTick:
+                state.count += 1
+                state.fact = nil
+                return .none
+            case .toggleTimerButtonDidTap:
+                state.isTimerRunning.toggle()
+                if state.isTimerRunning != false {
+                    return .run { send in
+                        while true {
+                            try await Task.sleep(for: .seconds(1))
+                            await send(.timerTick)
+                        }
+                    }
+                    .cancellable(id: CancelID.timer)
+                } else {
+                    return .cancel(id: CancelID.timer)
+                }
             }
         }
     }
