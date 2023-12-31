@@ -38,7 +38,6 @@ struct CounterView: View {
                     .background(Color.white.opacity(0.1))
                     .cornerRadius(10)
                     
-                    
                     Button("+") {
                         viewStore.send(.incrementButtonDidTap)
                     }
@@ -48,7 +47,17 @@ struct CounterView: View {
                     .background(Color.white.opacity(0.1))
                     .cornerRadius(10)
                 }
-                
+                                
+                Button(viewStore.isTimerRunning ? "Stop Timer": "Start Timer") {
+                    viewStore.send(.toggleTimerButtonDidTap)
+                }
+                .font(.title3)
+                .bold()
+                .padding()
+                .background(in: RoundedRectangle(cornerRadius: 20, style: .circular))
+                .foregroundStyle(.brown)
+                .padding(20)
+                                
                 Button("Facto") {
                     viewStore.send(.factButtonDidTap)
                 }
