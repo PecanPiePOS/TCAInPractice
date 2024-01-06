@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		586DDED02B469ECF00E86167 /* FeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5852513D2B469AB800365123 /* FeatureTest.swift */; };
+		588B5C832B4968A100F86E32 /* NewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588B5C822B4968A100F86E32 /* NewView.swift */; };
 		58A47B9F2B3D380B007ADCC5 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A47B9E2B3D380B007ADCC5 /* CounterView.swift */; };
 		58ADA3BB2B3C1F6200ED0BC5 /* TCA_StudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADA3BA2B3C1F6200ED0BC5 /* TCA_StudyApp.swift */; };
 		58ADA3C12B3C1F6300ED0BC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58ADA3C02B3C1F6300ED0BC5 /* Assets.xcassets */; };
@@ -37,7 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5852513D2B469AB800365123 /* FeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTest.swift; sourceTree = "<group>"; };
 		587312B82B3EA45900219A3A /* TCA-Study-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TCA-Study-Info.plist"; sourceTree = SOURCE_ROOT; };
+		588B5C822B4968A100F86E32 /* NewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewView.swift; sourceTree = "<group>"; };
 		58A47B9E2B3D380B007ADCC5 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		58ADA3B72B3C1F6200ED0BC5 /* TCA_Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCA_Study.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ADA3BA2B3C1F6200ED0BC5 /* TCA_StudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_StudyApp.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				58A47B9E2B3D380B007ADCC5 /* CounterView.swift */,
+				588B5C822B4968A100F86E32 /* NewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 		58ADA3CC2B3C1F6400ED0BC5 /* TCA_StudyTests */ = {
 			isa = PBXGroup;
 			children = (
+				5852513D2B469AB800365123 /* FeatureTest.swift */,
 				58ADA3CD2B3C1F6400ED0BC5 /* TCA_StudyTests.swift */,
 			);
 			path = TCA_StudyTests;
@@ -308,6 +314,7 @@
 				58ADA3BB2B3C1F6200ED0BC5 /* TCA_StudyApp.swift in Sources */,
 				58ADA3EF2B3C4A1F00ED0BC5 /* MacroInPractice.swift in Sources */,
 				58ADA3E92B3C284A00ED0BC5 /* CounterFeature.swift in Sources */,
+				588B5C832B4968A100F86E32 /* NewView.swift in Sources */,
 				58A47B9F2B3D380B007ADCC5 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				586DDED02B469ECF00E86167 /* FeatureTest.swift in Sources */,
 				58ADA3CE2B3C1F6400ED0BC5 /* TCA_StudyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
