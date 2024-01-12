@@ -7,12 +7,64 @@
 
 import SwiftUI
 
+import ComposableArchitecture
+
 struct ContactsView: View {
+    let store: StoreOf<ContactsFeature>
+    @ObservedObject var viewStore: ViewStoreOf<ContactsFeature>
+    
+    init(store: StoreOf<ContactsFeature>) {
+        self.store = store
+        self.viewStore = ViewStore(self.store, observe: { $0 })
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            List {
+                ForEach(viewStore.state.contacts) { contact in
+                    HStack {
+                        Text(contact.name)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .foregroundStyle(.gray)
+                    }
+                }
+            }
+            .navigationTitle("Contacts")
+            .toolbar {
+                ToolbarItem {
+                    Button(action: {
+                        viewStore.send(.addButtonDidTap)
+                    }, label: {
+                        Image(systemName: "plus.circle.fill")
+                            .tint(.purple)
+                    })
+                }
+            }
+        }
+        .sheet(store: self.store.scope(
+            state: \.$addContact,
+            action: \.addContact)
+        ) { addContactStore in
+            NavigationStack {
+                AddContactView(store: addContactStore)
+            }
+        }
     }
 }
 
 #Preview {
-    ContactsView()
+    ContactsView(store: Store(
+        initialState: ContactsFeature.State(
+            contacts: [
+                ContactModel(id: UUID(), name: "Neymar"),
+                ContactModel(id: UUID(), name: "Dele"),
+                ContactModel(id: UUID(), name: "Son"),
+                ContactModel(id: UUID(), name: "Romero")
+            ]
+        )) {
+                ContactsFeature()
+            })
 }
+
+
