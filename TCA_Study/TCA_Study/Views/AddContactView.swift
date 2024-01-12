@@ -7,12 +7,33 @@
 
 import SwiftUI
 
-struct AddContactView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+import ComposableArchitecture
 
-#Preview {
-    AddContactView()
+struct AddContactView: View {
+    
+    let store: StoreOf<AddContactsFeature>
+    @ObservedObject var viewStore: ViewStoreOf<AddContactsFeature>
+    
+    init(store: StoreOf<AddContactsFeature>) {
+        self.store = store
+        self.viewStore = ViewStore(self.store, observe: { $0 })
+    }
+    
+    var body: some View {
+        Form {
+            TextField("Name", text: viewStore.binding(get: \.contact.name, send: { .setName($0) }))
+            Button("Save") {
+                viewStore.send(.saveButtonDidTap)
+            }
+            .foregroundStyle(.green)
+        }
+        .toolbar {
+            ToolbarItem {
+                Button("Cancel") {
+                    viewStore.send(.cancelButtonDidtap)
+                }
+                .foregroundStyle(.orange)
+            }
+        }
+    }
 }
