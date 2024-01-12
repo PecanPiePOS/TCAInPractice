@@ -12,16 +12,22 @@ import ComposableArchitecture
 
 @main
 struct TCA_StudyApp: App {
-    static let store = Store(initialState: AppFeature.State()) {
-        AppFeature()
-            ._printChanges()
-    }
-
+    static let store = Store(
+        initialState: ContactsFeature.State(
+            contacts: [
+                ContactModel(id: UUID(), name: "Neymar"),
+                ContactModel(id: UUID(), name: "Dele"),
+                ContactModel(id: UUID(), name: "Son"),
+                ContactModel(id: UUID(), name: "Romero")
+            ]
+        )) {
+            ContactsFeature()
+                ._printChanges()
+        }
+    
     var body: some Scene {
         WindowGroup {
-            AppTabview(
-                store: TCA_StudyApp.store
-            )
+            ContactsView(store: TCA_StudyApp.store)
         }
     }
 }
