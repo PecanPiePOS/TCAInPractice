@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		586774C32B4B9E0A00851A3C /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586774C22B4B9E0A00851A3C /* AppFeature.swift */; };
 		586774C52B4BA36400851A3C /* AppFeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586774C42B4BA36400851A3C /* AppFeatureTest.swift */; };
+		586BA6572B567EC700B6AEE8 /* UpgradedContactFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586BA6562B567EC700B6AEE8 /* UpgradedContactFeature.swift */; };
 		586DDED02B469ECF00E86167 /* FeatureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5852513D2B469AB800365123 /* FeatureTest.swift */; };
 		58802FCE2B51059C001C4B51 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58802FCD2B51059C001C4B51 /* ContactsView.swift */; };
 		58802FD02B5105A9001C4B51 /* ContactsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58802FCF2B5105A9001C4B51 /* ContactsFeature.swift */; };
@@ -50,6 +51,7 @@
 		5852513D2B469AB800365123 /* FeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTest.swift; sourceTree = "<group>"; };
 		586774C22B4B9E0A00851A3C /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
 		586774C42B4BA36400851A3C /* AppFeatureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeatureTest.swift; sourceTree = "<group>"; };
+		586BA6562B567EC700B6AEE8 /* UpgradedContactFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradedContactFeature.swift; sourceTree = "<group>"; };
 		587312B82B3EA45900219A3A /* TCA-Study-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TCA-Study-Info.plist"; sourceTree = SOURCE_ROOT; };
 		58802FCD2B51059C001C4B51 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		58802FCF2B5105A9001C4B51 /* ContactsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFeature.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				586774C22B4B9E0A00851A3C /* AppFeature.swift */,
 				58ADA3E82B3C284A00ED0BC5 /* CounterFeature.swift */,
 				58802FCF2B5105A9001C4B51 /* ContactsFeature.swift */,
+				586BA6562B567EC700B6AEE8 /* UpgradedContactFeature.swift */,
 				58802FD42B510E28001C4B51 /* AddContactsFeature.swift */,
 			);
 			path = Reducers;
@@ -353,6 +356,7 @@
 			files = (
 				58ADA3BB2B3C1F6200ED0BC5 /* TCA_StudyApp.swift in Sources */,
 				58ADA3EF2B3C4A1F00ED0BC5 /* MacroInPractice.swift in Sources */,
+				586BA6572B567EC700B6AEE8 /* UpgradedContactFeature.swift in Sources */,
 				58ADA3E92B3C284A00ED0BC5 /* CounterFeature.swift in Sources */,
 				58802FD72B510F1F001C4B51 /* AddContactView.swift in Sources */,
 				58802FD52B510E28001C4B51 /* AddContactsFeature.swift in Sources */,

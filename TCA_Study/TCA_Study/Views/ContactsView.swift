@@ -25,8 +25,13 @@ struct ContactsView: View {
                     HStack {
                         Text(contact.name)
                         Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundStyle(.gray)
+                        Button {
+                            viewStore.send(.deleteButtonDidTap(id: contact.id))
+                        } label: {
+                            Image(systemName: "trash")
+                                .foregroundStyle(.red)
+                        }
+
                     }
                 }
             }
@@ -43,13 +48,17 @@ struct ContactsView: View {
             }
         }
         .sheet(store: self.store.scope(
-            state: \.$addContact,
-            action: \.addContact)
+            state: \.$destination.addContact,
+            action: \.destination.addContact)
         ) { addContactStore in
             NavigationStack {
                 AddContactView(store: addContactStore)
             }
         }
+        .alert(store: self.store.scope(
+            state: \.$destination.alert,
+            action: \.destination.alert)
+        )
     }
 }
 
