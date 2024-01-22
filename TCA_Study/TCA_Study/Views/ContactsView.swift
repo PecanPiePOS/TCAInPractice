@@ -23,6 +23,7 @@ struct ContactsView: View {
             List {
                 ForEach(viewStore.state.contacts) { contact in
                     HStack {
+                        
                         Text(contact.name)
                         Spacer()
                         Button {
@@ -31,7 +32,6 @@ struct ContactsView: View {
                             Image(systemName: "trash")
                                 .foregroundStyle(.red)
                         }
-
                     }
                 }
             }
